@@ -1,0 +1,150 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header('Location: auth/login.php');
+    exit();
+}
+?>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
+
+    <title>PREK FOR U</title>
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f5f3eb;
+        color: #3e2723;
+        padding-top: 70px;
+      }
+      .navbar {
+        background-color: #4e342e !important;
+        transition: all 0.3s;
+      }
+      .navbar .nav-link {
+        color: #d7ccc8 !important;
+        transition: color 0.3s;
+      }
+      .navbar .nav-link:hover {
+        color: #ff7043 !important;
+      }
+      .navbar-brand {
+        font-family: 'Playfair Display', serif;
+        font-weight: bold;
+        font-size: 28px;
+      }
+      .jumbotron {
+        background: url('images/background/java.jpg') no-repeat center center;
+        background-size: cover;
+        height: 1000px;
+        position: relative;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        animation: fadeIn 1.5s ease-in-out;
+      }
+      .jumbotron::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .jumbotron .container {
+        position: relative;
+        z-index: 2;
+      }
+      .coffee-text {
+        font-family: 'Playfair Display', serif;
+        font-weight: bold;
+        font-size: 48px;
+        background: url('images/coffee-texture.jpg') no-repeat center center;
+        background-size: cover;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .footer {
+        background-color: #3e2723;
+        color: #d7ccc8;
+        padding: 20px 0;
+        text-align: center;
+        margin-top: 50px;
+        font-size: 14px;
+      }
+      .footer i {
+        margin: 0 10px;
+        transition: color 0.3s;
+      }
+      .footer i:hover {
+        color: #ff7043;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+    </style>
+  </head>
+  <body>
+  
+  <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand coffee-text" href="#"><strong>Java Coffe</strong> </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a class="nav-link" href="index.php">HOME</a></li>
+              <li class="nav-item"><a class="nav-link" href="daftar_menu.php">DAFTAR MENU</a></li>
+              <li class="nav-item"><a class="nav-link" href="pesanan.php">PESANAN ANDA</a></li>
+              <li class="nav-item"><a class="nav-link" href="logout.php">LOGOUT</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  <!-- Akhir Navbar -->
+
+  <!-- Jumbotron -->
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4 font-weight-bold coffee-text">Java Coffe</h1>
+          <hr>
+          <p class="lead">Nikmati secangkir kopi terbaik untuk hari yang lebih baik</p>
+        </div>
+      </div>
+  <!-- Akhir Jumbotron -->
+
+  <div class="container mt-5 pt-5 text-center">
+    <h3 class="font-weight-bold coffee-text">Java Coffe</h3>
+    <h5>Jl. Almamater NO. 1 Kampus USU Medan- Sumatera Utara - POLMED Pintu IV Gedung N</h5>
+    <h5>Buka Jam <strong>13:00 - 17:00</strong></h5>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2025 JAVA COFFE | Powered by Coffee</p>
+    <div>
+      <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+      <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+      <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
